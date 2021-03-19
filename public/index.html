@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Swoop | DHL ESI</title>
+        <link href="https://fonts.googleapis.com/css?family=Roboto&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css" integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/" crossorigin="anonymous">
+        <link rel="stylesheet" href="inc/styling/css/index.css" type="text/css">
+    </head>
+    <body>
+        <nav>
+            <h2>Swp</h2>
+            <p><i class="far fa-star"></i>DHL ESI</p>
+            <div class="floatFixer"></div>
+        </nav>
+        <div id="swp">
+            <div id="status">
+                <p id="statusTitle">Status</p>
+                <div class="statusCard" onclick="updateDb();"><p><i class="fas fa-times" id="statusDb"></i>Database</p></div>
+                <div class="statusCard" onclick="updateTest();"><p><i class="fas fa-times" id="statusTest"></i>Test</p></div>
+                <div class="floatFixer"></div>
+            </div>
+            <div id="pallets">
+                <form id="palletForm" onsubmit="event.preventDefault(); addPackage();">
+                    <select id="palletSelect" name="palletList">
+                        <option value="-1">Couldn't find any pallets</option>
+                    </select>
+                    <input type="text" id="barcode" placeholder="Barcode">
+                </form>
+                <div class="floatFixer"></div>
+                <div class="updateBtn" onclick="updatePallets();">Update</div>
+            </div>
+        </div>
+        <script src="inc/styling/js/index.js"></script>
+    </body>
+</html>
